@@ -5,37 +5,41 @@ def home(request):
     return render(request,'home.html')
 
 def data(request):
-    print(request.methode)
+    print(request.method)
     print(request.FILES)
     print(request.POST)
 
-    # name=request.POST.get('username')
-    # email=request.POST.get('email')
-    # detail=request.POST.get('detail')
-    # phone=request.POST.get('phone')
-    # age=request.POST.get('age')
-    # volume=request.POST.get('volume')
-    # subscribe=request.POST.get('subscribe')
-    # gender=request.POST.get('gender')
-    # dob=request.POST.get('dob')
-    # password=request.POST.get('password')
-    # cpassword=request.POST.get('cpassword')
-    # profile_pic=request.FILES.get('profile-pic')
-    # resume=request.FILES.get('resume')
+    name = request.POST.get('username')
+    email = request.POST.get('email')
+    detail = request.POST.get('detail')
+    phone = request.POST.get('phone')
+    age = request.POST.get('age')
+    volume = request.POST.get('volume')
+    subscribe = request.POST.getlist('subscribe')
+    gender = request.POST.get('gender')
+    dob = request.POST.get('dob')
+    password = request.POST.get('password')
+    cpassword = request.POST.get('cpassword')
+    profile_pic = request.FILES.get('profile-pic')
+    resume = request.FILES.get('resume')
 
-    # print(name)
-    # print(email)
-    # print(detail)
-    # print(phone)
-    # print(age)
-    # print(volume)
-    # print(subscribe)
-    # print(gender)
-    # print(dob)
-    # print(password)
-    # print(cpassword)
-    # print(profile_pic)
-    # print(resume)
+    print(name)
+    print(email)
+    print(detail)
+    print(phone)
+    print(age)
+    print(volume)
+    print(subscribe)
+    print(gender)
+    print(dob)
+    print(profile_pic)
+    print(resume)
+    print(password)
+    print(cpassword)
+
+    # print(name,email,detail,phone,age,volume,subscribe,gender,dob,password,cpassword,profile_pic,resume)
+
+   
 
     # user_data={
     #     'name' : name,
@@ -54,22 +58,22 @@ def data(request):
     # }
     # print(user_data)
 
-    user_data = {
-        'name' : request.POST.get('username'),
-        'email': request.POST.get('email'),
-        'detail': request.POST.get('detail'),
-        'phone': request.POST.get('phone'),
-        'age': request.POST.get('age'),
-        'volume': request.POST.get('volume'),
-        'subscribe': request.POST.get('subscribe'),
-        'gender': request.POST.get('gender'),
-        'dob': request.POST.get('dob'),
-        'profile_pic': request.FILES.get('profile-pic'),
-        'resume': request.FILES.get('resume'),
-        'password': request.POST.get('password'),
-        'cpassword': request.POST.get('cpassword')
-       }
-    print(user_data)
+    # user_data = {
+    #     'name' : request.POST.get('username'),
+    #     'email': request.POST.get('email'),
+    #     'detail': request.POST.get('detail'),
+    #     'phone': request.POST.get('phone'),
+    #     'age': request.POST.get('age'),
+    #     'volume': request.POST.get('volume'),
+    #     'subscribe': request.POST.get('subscribe'),
+    #     'gender': request.POST.get('gender'),
+    #     'dob': request.POST.get('dob'),
+    #     'profile_pic': request.FILES.get('profile-pic'),
+    #     'resume': request.FILES.get('resume'),
+    #     'password': request.POST.get('password'),
+    #     'cpassword': request.POST.get('cpassword')
+    #    }
+    # print(user_data)
 
     # for i,j in request.POST.items():
     #     print(i,j)
