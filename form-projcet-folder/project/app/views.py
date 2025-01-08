@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Student
 
 # Create your views here.
 def home(request):
@@ -6,14 +7,13 @@ def home(request):
 
 def data(request):
     print(request.method)
-    print(request.FILES)
-    print(request.POST)
+    print(request.FILES)  #for binary contant from home.html
+    print(request.POST)   #for text contant from home.html
 
     name = request.POST.get('username')
     email = request.POST.get('email')
     detail = request.POST.get('detail')
     phone = request.POST.get('phone')
-    age = request.POST.get('age')
     volume = request.POST.get('volume')
     subscribe = request.POST.getlist('subscribe')
     gender = request.POST.get('gender')
@@ -27,7 +27,6 @@ def data(request):
     print(email)
     print(detail)
     print(phone)
-    print(age)
     print(volume)
     print(subscribe)
     print(gender)
@@ -38,9 +37,9 @@ def data(request):
     print(cpassword)
 
     # print(name,email,detail,phone,age,volume,subscribe,gender,dob,password,cpassword,profile_pic,resume)
+    Student.objects.create(name=name,email=email,detail=detail,phone=phone,volume=volume,subscribe=subscribe,gender=gender,dob=dob,password=password,profile_pic=profile_pic,resume=resume)
 
    
-
     # user_data={
     #     'name' : name,
     #     'email': email,
