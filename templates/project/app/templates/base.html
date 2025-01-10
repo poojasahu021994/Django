@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          text-decoration: none;
+          list-style-type: none;
+        }
+        ul li a{
+          text-decoration: none;
+          list-style-type: none;
+          text-align: center;
+          font-size: 20px;
+          color: black;  
+        }
+        .Navbar{
+          height: 50px;
+          width: 100%;
+          border: 1px solid gray;
+          background-color: aqua;
+        }
+        h1{
+            text-align: center;
+            color: rgb(17, 35, 139);
+        }
+          </style>
+</head>
+<body>
+    <nav class="Navbar">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'login' %}">login</a></li>         
+        </ul>
+      </nav>
+      <div style="height: 800px; width: 500px;"> 
+      {% block Content %}
+      
+      
+      {% endblock %}
+      </div>
+      <footer>
+        this is footer
+      </footer>
+</body>
+</html>
