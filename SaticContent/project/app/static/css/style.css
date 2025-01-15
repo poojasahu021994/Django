@@ -1,3 +1,94 @@
 .new{
     color: brown;
 }
+.service{
+    background-color: blue;
+}
+/* contact */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-value {
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.form-value div{
+    display: flex;
+    flex-direction:row;
+    gap: 15px;
+}
+.form-value div input{
+margin-left: 90px;
+}
+.form-value div input #mobile{
+    margin-right: 80px;
+    }
+label {
+    display: block;
+    flex-direction:row;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    
+}
+
+.but-submit {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    width: 80%;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.but-submit:hover {
+    background-color: #45a049;
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .form-value {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
