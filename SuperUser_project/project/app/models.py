@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Student(models.Model):
     name=models.CharField(max_length=50, help_text="Enter your name")
     email=models.EmailField(help_text="Enter Email")
@@ -14,3 +12,4 @@ class Student(models.Model):
     password=models.CharField(max_length=16)
     profile_pic=models.ImageField()
     resume=models.FileField()
+# Create your models here.
